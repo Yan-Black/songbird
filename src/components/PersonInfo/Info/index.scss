@@ -1,0 +1,63 @@
+$bg-person: #F2F3F4;
+$link-hover: #34495E;
+$info-text: #5D6D7E;
+$codewars-link: #5DADE2;
+
+.cv-info {
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 5px rgba(0,0,0,0.9);
+  border-radius: 5px;
+  margin-left: 2vw;
+  padding: 1vw;
+  background-color: $bg-person;
+  color: $info-text;
+}
+
+.info-header {
+  padding-bottom: .5vw;
+  margin-bottom: .5vw;
+  border-bottom: 2px solid $link-hover;
+}
+
+.person-data {
+  display: flex;
+  justify-content: space-between;
+  height: 70%;
+}
+
+.cv-technologies, .cv-codewars {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cv-technologies-list {
+  font-size: 18px;
+}
+
+.cv-codewars {
+  background-color: #fff;
+  box-shadow: inset 0px 0px 5px rgba(0,0,0,0.9);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.cv-codewars-link {
+  text-decoration: none;
+  color: $codewars-link;
+  transition: .2s;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    opacity: .5;
+  }
+}
+
+.cv-codewars-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
