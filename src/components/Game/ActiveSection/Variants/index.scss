@@ -1,7 +1,11 @@
+$border: #2E4053;
+$background: #2E4053;
+$check-def: #85929E;
+
 .game-variants {
   flex: 1;
   border-radius: 5px;
-  border: 1px solid darkgrey;
+  border: 1px solid $border;
   margin-right: 1vw;
 }
 
@@ -16,7 +20,7 @@
   width: 0.5vw;
   height: 0.5vw;
   border-radius: 50%;
-  background-color: grey;
+  background-color: $check-def;
   margin-right: 1vw;
 }
 
@@ -26,8 +30,13 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: 1vw;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid $border;
+  transition: .2s;
+  cursor: pointer;
   &:last-child {
     border: none;
+  }
+  &:hover {
+    background-color: $background;
   }
 }

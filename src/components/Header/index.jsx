@@ -11,9 +11,9 @@ const Header = () => (
           <i>bird</i>
         </span>
       </h1>
-      <span>
+      <h2>
         {`Score: ${0}`}
-      </span>
+      </h2>
     </div>
     <Categories />
   </div>

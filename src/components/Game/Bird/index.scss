@@ -1,7 +1,9 @@
+$background: #2E4053;
+
 .game__bird {
   padding: 1vw;
   flex: 1;
-  background-color: gray;
+  background-color: $background;
   border-radius: 5px;
 }
 

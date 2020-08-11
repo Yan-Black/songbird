@@ -1,15 +1,18 @@
-.header__category {
+$category: #16A085;
+$active: #48C9B0;
+
+.header-category {
   width: 100%;
   display: flex;
   color: #FFF;
   border-radius: 5px;
 }
 
-.header__category_mode {
+.category-mode {
   padding: .5vw;
   text-align: center;
   flex-grow: 1;
-  background-color: green;
+  background-color: $category;
   &:first-child {
     border-radius: 5px 0 0 5px;
   }
@@ -18,6 +21,6 @@
   }
 }
 
-.header__category_mode.active_mode {
-  background-color: lightgreen;
+.category-mode.active-mode {
+  background-color: $active;
 }
