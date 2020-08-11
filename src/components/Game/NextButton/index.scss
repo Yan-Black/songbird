@@ -1,0 +1,11 @@
+.next-btn {
+  width: 100%;
+  padding: .5vw;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}

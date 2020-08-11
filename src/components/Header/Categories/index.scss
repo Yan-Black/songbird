@@ -1,0 +1,23 @@
+.header__category {
+  width: 100%;
+  display: flex;
+  color: #FFF;
+  border-radius: 5px;
+}
+
+.header__category_mode {
+  padding: .5vw;
+  text-align: center;
+  flex-grow: 1;
+  background-color: green;
+  &:first-child {
+    border-radius: 5px 0 0 5px;
+  }
+  &:last-child {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.header__category_mode.active_mode {
+  background-color: lightgreen;
+}

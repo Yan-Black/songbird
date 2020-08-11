@@ -1,0 +1,38 @@
+.game__bird {
+  padding: 1vw;
+  flex: 1;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.bird-image {
+  width: 20%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.bird-name {
+  border-bottom: 2px solid darkgrey;
+  padding: 1vw 0;
+  width: 100%;
+  margin-bottom: 2vw;
+}
+
+.player-section {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.react-audio-player {
+  width: 100%;
+}

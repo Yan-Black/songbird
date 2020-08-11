@@ -1,0 +1,33 @@
+.game-variants {
+  flex: 1;
+  border-radius: 5px;
+  border: 1px solid darkgrey;
+  margin-right: 1vw;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.check-mark {
+  display: inline-block;
+  width: 0.5vw;
+  height: 0.5vw;
+  border-radius: 50%;
+  background-color: grey;
+  margin-right: 1vw;
+}
+
+.game-variant {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1vw;
+  border-bottom: 1px solid darkgrey;
+  &:last-child {
+    border: none;
+  }
+}
