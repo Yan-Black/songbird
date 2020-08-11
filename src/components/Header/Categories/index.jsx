@@ -1,8 +1,8 @@
 import React from 'react';
 import './index.scss';
 
-const Education = () => (
+const Categories = () => (
   <div />
 );
 
-export default Education;
+export default Categories;

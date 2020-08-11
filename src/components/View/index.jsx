@@ -1,21 +1,13 @@
 import React from 'react';
-import PersonInfo from '../PersonInfo';
-import AboutMe from '../AboutMe';
-import Projects from '../Projects';
-import Education from '../Education';
-import English from '../English';
+import Header from '../Header';
+import Game from '../Game';
 import './index.scss';
 
 const View = () => (
-  <div className="cv-view">
-    <div className="cv-wrapper">
-      <PersonInfo />
-      <AboutMe />
-      <Projects />
-      <English />
-      <Education />
-    </div>
-  </div>
+  <>
+    <Header />
+    <Game />
+  </>
 );
 
 export default View;
