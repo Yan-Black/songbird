@@ -1,12 +1,12 @@
 import React from 'react';
-import Bird from './Bird';
+import BirdSection from './BirdSection';
 import ActiveSection from './ActiveSection';
 import NextButton from './NextButton';
 import './index.scss';
 
 const Game = () => (
   <>
-    <Bird />
+    <BirdSection />
     <ActiveSection />
     <NextButton />
   </>

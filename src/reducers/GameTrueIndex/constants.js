@@ -1,0 +1,2 @@
+export const SET_TRUE_INDEX = 'SET_TRUE_INDEX';
+export const RESET_TRUE_INDEX = 'RESET_TRUE_INDEX';

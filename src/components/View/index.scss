@@ -7,13 +7,15 @@
 }
 
 $background: #212F3C;
+$f-size: 1.1em;
 
 body {
   background-color: $background;
+  font-size: $f-size;
 }
 
 .app-wrapper {
-  width: 1024px;
+  width: 1200px;
   margin: auto;
   color: #FFF;
   padding: 1vw;

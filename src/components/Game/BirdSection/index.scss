@@ -1,0 +1,26 @@
+.game-bird-section {
+  display: flex;
+  height: 200px;
+}
+
+.section-bird-image {
+  border-radius: 5px;
+  margin-right: 2vw;
+  height: auto;
+  width: 20%;
+}
+
+.section-player-container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.section-bird-info {
+  padding-bottom: 2vw;
+  border-bottom: 1px solid darkgrey;
+  width: 100%;
+}

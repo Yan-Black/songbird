@@ -1,6 +1,9 @@
 $border: #2E4053;
 $background: #2E4053;
 $check-def: #85929E;
+$check-success: #48C9B0;
+$check-err: #EC7063;
+$font: #FFF;
 
 .game-variants {
   flex: 1;
@@ -17,11 +20,19 @@ $check-def: #85929E;
 
 .check-mark {
   display: inline-block;
-  width: 0.5vw;
-  height: 0.5vw;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: $check-def;
   margin-right: 1vw;
+}
+
+.err {
+  background-color: $check-err;
+}
+
+.success {
+  background-color: $check-success;
 }
 
 .game-variant {
@@ -30,13 +41,20 @@ $check-def: #85929E;
   align-items: center;
   justify-content: flex-start;
   padding-left: 1vw;
+  border: none;
+  background: transparent;
+  color: $font;
   border-bottom: 1px solid $border;
   transition: .2s;
+  outline: none;
   cursor: pointer;
   &:last-child {
     border: none;
   }
   &:hover {
     background-color: $background;
+  }
+  &:focus {
+    outline: none;
   }
 }

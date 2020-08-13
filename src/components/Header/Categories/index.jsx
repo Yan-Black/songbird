@@ -1,24 +1,27 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Modes from '../../../constants';
 import './index.scss';
 
-const Categories = () => (
-  <div className="header-categories">
-    <ul className="header-category">
-      {Modes.map((mode, i) => (
-        <li
-          className={
-          i === 0
+const Categories = () => {
+  const index = useSelector((state) => state.game.activeIndex);
+  return (
+    <div className="header-categories">
+      <ul className="header-category">
+        {Modes.map((mode, i) => (
+          <li
+            className={
+          i === index
             ? 'category-mode active-mode'
             : 'category-mode'
           }
-          key={mode}
-        >
-          {mode}
-        </li>
-      ))}
-    </ul>
-  </div>
-);
-
+            key={mode}
+          >
+            {mode}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 export default Categories;

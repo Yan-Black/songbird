@@ -1,15 +1,29 @@
 $border: #2E4053;
+$background: #16A085;
+$hover: #48C9B0;
 
 .next-btn {
   width: 100%;
   padding: .5vw;
   border-radius: 5px;
   background: transparent;
+  font-size: 1.1em;
   color: #FFF;
   cursor: pointer;
   border: 1px solid $border;
   outline: none;
   &:focus {
     outline: none;
+  }
+}
+
+.solved {
+  transition: .2s;
+  background: $background;
+  &:hover {
+    background: $hover;
+  }
+  &:active {
+    background: $background;
   }
 }
