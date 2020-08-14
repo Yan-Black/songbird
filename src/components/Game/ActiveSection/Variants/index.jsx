@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSolved, setToInitial } from '../../../../reducers/GameStatus/actions';
-import { updateScore } from '../../../../reducers/GameResult/actions';
-import { setBird } from '../../../../reducers/GameBird/actions';
-import { setTrueIndex } from '../../../../reducers/GameTrueIndex/actions';
-import birdsData from '../../../../constants/birds-data';
-import { chekMarks, getRandom, maxScore } from '../../../../constants';
+import { setSolved } from 'reducers/GameStatus/actions';
+import { updateScore } from 'reducers/GameResult/actions';
+import { setBird } from 'reducers/GameBird/actions';
+import birdsData from '@constants/birds-data';
+import {
+  chekMarks,
+  maxScore,
+  audioSuccess,
+  audioErr,
+} from '@constants';
 import './index.scss';
 
 const Variants = () => {
@@ -27,18 +31,18 @@ const Variants = () => {
       setMarkStyles(marksClone);
       dispatch(setSolved());
       dispatch(updateScore(score));
+      audioSuccess.play();
     } else {
       score > 0 && setScore(score - 1);
       if (!isSolved) {
         marksClone.splice(idx, 1, 'check-mark err');
         setMarkStyles(marksClone);
+        audioErr.play();
       }
     }
   };
 
   useEffect(() => {
-    dispatch(setTrueIndex(getRandom()));
-    dispatch(setToInitial());
     setMarkStyles(chekMarks);
     setScore(maxScore);
   }, [index]);

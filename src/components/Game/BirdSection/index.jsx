@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
 import ReactAudioPlayer from 'react-audio-player';
-import birdsData from '../../../constants/birds-data';
-import placeholder from '../../../assets/placeholder.jpg';
-import { namePlaceholder } from '../../../constants';
+import birdsData from '@constants/birds-data';
+import placeholder from 'assets/placeholder.jpg';
+import { namePlaceholder } from '@constants';
 import './index.scss';
 
 const BirdSection = () => {
@@ -11,6 +11,19 @@ const BirdSection = () => {
   const index = useSelector((state) => state.game.activeIndex);
   const trueIndex = useSelector((state) => state.trueIdx.trueIdx);
   const { audio, name, image } = birdsData[index][trueIndex];
+  window.console.log(name);
+  const ref = useRef(null);
+  if (isSolved) {
+    const {
+      current: {
+        audioEl: {
+          current: player,
+        },
+      },
+    } = ref;
+    player.pause();
+  }
+
   return (
     <div className="game-bird-section">
       <img
@@ -24,6 +37,7 @@ const BirdSection = () => {
         </div>
         <ReactAudioPlayer
           src={audio}
+          ref={ref}
           controls
           style={{ outline: 'none' }}
         />

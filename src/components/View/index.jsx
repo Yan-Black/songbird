@@ -1,12 +1,21 @@
 import React from 'react';
-import Header from '../Header';
-import Game from '../Game';
+import { useSelector } from 'react-redux';
+import Header from 'components/Header';
+import Game from 'components/Game';
+import Results from 'components/Results';
+import birdsData from '@constants/birds-data';
 import './index.scss';
 
-const View = () => (
-  <div className="app-wrapper">
-    <Header />
-    <Game />
-  </div>
-);
+const View = () => {
+  const index = useSelector((state) => state.game.activeIndex);
+  const isPlayed = birdsData.length === index;
+  return (
+    <div className="app-wrapper">
+      <Header />
+      {isPlayed
+        ? <Results />
+        : <Game />}
+    </div>
+  );
+};
 export default View;

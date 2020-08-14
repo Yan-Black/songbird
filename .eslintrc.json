@@ -24,5 +24,8 @@
         "react/prop-types": "off",
         "no-plusplus": "off",
         "no-unused-expressions": ["error", { "allowShortCircuit": true }]
+    },
+    "settings": {
+      "import/resolver": "webpack"
     }
 }

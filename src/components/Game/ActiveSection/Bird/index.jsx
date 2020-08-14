@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import ReactAudioPlayer from 'react-audio-player';
-import { setData } from '../../../../reducers/GameBird/BirdData/actions';
-import birdsData from '../../../../constants/birds-data';
+import { setData } from 'reducers/GameBird/BirdData/actions';
+import birdsData from '@constants/birds-data';
 import './index.scss';
 
 const Bird = () => {

@@ -13,6 +13,13 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
+    alias: {
+      assets: path.resolve(__dirname, 'src/assets/'),
+      components: path.resolve(__dirname, 'src/components/'),
+      '@constants': path.resolve(__dirname, 'src/constants/'),
+      custom: path.resolve(__dirname, 'src/custom/'),
+      reducers: path.resolve(__dirname, 'src/reducers/'),
+    },
     extensions: ['.js', '.jsx'],
   },
   module: {
@@ -35,7 +42,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(svg|png|jpe?g)$/i,
+        test: /\.(svg|png|mp3|jpe?g)$/i,
         use: [
           {
             loader: 'file-loader',

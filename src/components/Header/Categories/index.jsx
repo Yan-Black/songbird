@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Modes from '../../../constants';
+import Modes from '@constants';
 import './index.scss';
 
 const Categories = () => {
