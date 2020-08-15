@@ -32,3 +32,16 @@ $background: #2E4053;
     background: $hover;
   }
 }
+
+
+@media (max-width: 500px) {
+  .results-btn {
+    padding: 2.5vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .results-btn {
+    padding: 3vw;
+  }
+}

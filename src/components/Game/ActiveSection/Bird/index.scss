@@ -1,6 +1,6 @@
 $background: #2E4053;
 
-.game__bird {
+.game-bird {
   padding: 1vw;
   flex: 1;
   background-color: $background;
@@ -67,7 +67,7 @@ $background: #2E4053;
 }
 
 @media (max-width: 768px) {
-  .game__bird {
+  .game-bird {
     padding: 2vw;
   }
 
@@ -96,7 +96,7 @@ $background: #2E4053;
 }
 
 @media (max-width: 500px) {
-  .game__bird {
+  .game-bird {
     padding: 4vw;
   }
 

@@ -24,7 +24,7 @@ const Bird = () => {
   }, [bird]);
 
   return (
-    <div className="game__bird">
+    <div className="game-bird">
       <div className="player-section">
         <img
           className="bird-image"

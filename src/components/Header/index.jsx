@@ -7,7 +7,7 @@ const Header = () => {
   const score = useSelector((state) => state.result.score);
   return (
     <div className="header">
-      <div className="header__logo">
+      <div className="header-logo">
         <h1>
           <i>Song</i>
           <span className="logo-chunk">

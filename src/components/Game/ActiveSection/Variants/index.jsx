@@ -17,6 +17,7 @@ const Variants = () => {
   const index = useSelector((state) => state.game.activeIndex);
   const isSolved = useSelector((state) => state.status.isSolved);
   const trueIndex = useSelector((state) => state.trueIdx.trueIdx);
+
   const [markStyles, setMarkStyles] = useState(chekMarks);
   const [score, setScore] = useState(maxScore);
 
@@ -27,17 +28,21 @@ const Variants = () => {
     const bird = birdsData[index][idx].name;
     dispatch(setBird(bird));
     if (idx === trueIndex) {
+      if (marksClone[idx] !== 'check-mark success') {
+        audioSuccess.play();
+      }
       marksClone.splice(idx, 1, 'check-mark success');
       setMarkStyles(marksClone);
       dispatch(setSolved());
       dispatch(updateScore(score));
-      audioSuccess.play();
     } else {
       score > 0 && setScore(score - 1);
       if (!isSolved) {
+        if (marksClone[idx] !== 'check-mark err') {
+          audioErr.play();
+        }
         marksClone.splice(idx, 1, 'check-mark err');
         setMarkStyles(marksClone);
-        audioErr.play();
       }
     }
   };
