@@ -1,5 +1,6 @@
 $border: #2E4053;
 $background: #2E4053;
+$variant: #283747;
 $check-def: #85929E;
 $check-success: #48C9B0;
 $check-err: #EC7063;
@@ -10,12 +11,12 @@ $font: #FFF;
   border-radius: 5px;
   border: 1px solid $border;
   margin-right: 1vw;
+  height: max-content;
 }
 
 .game-list {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .check-mark {
@@ -40,9 +41,9 @@ $font: #FFF;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 1vw;
+  padding: 1vw;
   border: none;
-  background: transparent;
+  background: $variant;
   color: $font;
   border-bottom: 1px solid $border;
   transition: .2s;
@@ -58,3 +59,55 @@ $font: #FFF;
     outline: none;
   }
 }
+
+@media (max-width: 1024px) {
+  .game-variants {
+    margin-right: 2vw;
+  }
+  .game-variant {
+    padding: 1.7vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-variants {
+    margin-right: 4vw;
+  }
+
+  .check-mark {
+    margin-right: 1.5vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .game-variants {
+    margin-right: 0;
+    margin-bottom: 2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .game-variant {
+    padding: 4vw;
+  }
+
+  .game-variants {
+    margin-bottom: 5vw;
+  }
+
+  .check-mark {
+    margin-right: 4vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .game-variant {
+    padding: 5vw;
+  }
+
+  .game-variants {
+    margin-bottom: 10vw;
+  }
+}
+
+

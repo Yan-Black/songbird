@@ -5,6 +5,7 @@ $hover: #48C9B0;
 .next-btn {
   width: 100%;
   padding: .5vw;
+  margin: 2vw 0;
   border-radius: 5px;
   background: transparent;
   font-size: 1.1em;
@@ -25,5 +26,27 @@ $hover: #48C9B0;
   }
   &:active {
     background: $background;
+  }
+}
+
+@media (max-width: 768px) {
+  .next-btn {
+    padding: 1vw;
+    margin: 4vw 0;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .next-btn {
+    padding: 2.5vw;
+    margin: 5vw 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .next-btn {
+    padding: 3vw;
+    margin: 10vw 0;
   }
 }

@@ -2,17 +2,17 @@ $background: #2E4053;
 
 .game-bird-section {
   display: flex;
-  height: 200px;
   border-radius: 5px;
   padding: 1vw;
+  margin-bottom: 2vw;
   background: $background;
 }
 
-.section-bird-image {
-  border-radius: 5px;
+.section-image {
+  height: 155px;
+  width: 200px;
   margin-right: 2vw;
-  height: auto;
-  width: 20%;
+  border-radius: 5px;
 }
 
 .section-player-container {
@@ -25,7 +25,55 @@ $background: #2E4053;
 }
 
 .section-bird-info {
-  padding-bottom: 2vw;
+  padding-bottom: 1vw;
+  margin-bottom: 1vw;
   border-bottom: 1px solid darkgrey;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .section-bird-info {
+    margin-bottom: 2vw;
+  }
+
+  .section-image {
+    margin-right: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-bird-section {
+    padding: 2vw;
+    margin-bottom: 4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .game-bird-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 4vw;
+    margin-bottom: 5vw;
+  }
+
+  .section-image {
+    margin-right: 0;
+  }
+
+  .section-bird-info {
+    text-align: center;
+    margin: 5vw 0;
+    padding-bottom: 3vw;
+  }
+
+  .section-player-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .game-bird-section {
+    padding: 5vw;
+    margin-bottom: 10vw;
+  }
 }

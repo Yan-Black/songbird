@@ -16,9 +16,9 @@ const Results = () => {
 
   return (
     <div className="results-wrapper">
-      <div className="results-info">
-        <h1>{`Поздравляем, Вы набрали ${score} из 30 очков!`}</h1>
-      </div>
+      <h1>
+        {`Поздравляем, Вы набрали ${score} из 30 очков!`}
+      </h1>
       <button
         type="button"
         className="results-btn"

@@ -27,7 +27,7 @@ const BirdSection = () => {
   return (
     <div className="game-bird-section">
       <img
-        className="section-bird-image"
+        className="section-image"
         src={isSolved ? image : placeholder}
         alt="bird"
       />

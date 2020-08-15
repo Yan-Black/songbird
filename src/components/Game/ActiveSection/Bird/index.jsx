@@ -45,7 +45,9 @@ const Bird = () => {
           />
         </div>
       </div>
-      <p>{description}</p>
+      <p className="bird-description">
+        {description}
+      </p>
     </div>
   );
 };
