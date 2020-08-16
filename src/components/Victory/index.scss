@@ -1,0 +1,86 @@
+$background: #0008;
+$button: #283747;
+$hover: #2E4053;
+
+.vitory-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $background;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 0 15%;
+}
+
+.victory-image {
+  max-width: 500px;
+  height: auto;
+}
+
+.congratulations-score {
+  font-size: 5vw;
+  margin-bottom: 2vw;
+  animation: .7s scale 3;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(1.1);
+  }
+}
+
+.play-again-btn {
+  width: 30%;
+  padding: 1vw;
+  font-size: 1.2em;
+  color: #FFF;
+  background: $button;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: .2s;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background: $hover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vitory-wrapper {
+    padding: 10% 0 40%;
+  }
+
+  .congratulations-score {
+    font-size: 7vw;
+  }
+
+  .play-again-btn {
+    padding: 2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .victory-image {
+    width: 90%;
+    margin: 0 auto 0;
+    height: auto;
+  }
+
+  .vitory-wrapper {
+    padding: 10% 0 60%;
+  }
+
+  .play-again-btn {
+    padding: 4vw;
+    width: 90%;
+  }
+}

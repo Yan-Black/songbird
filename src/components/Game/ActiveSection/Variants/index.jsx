@@ -7,7 +7,7 @@ import birdsData from '@constants/birds-data';
 import {
   chekMarks,
   maxScore,
-  audioSuccess,
+  audioCorrect,
   audioErr,
 } from '@constants';
 import './index.scss';
@@ -29,7 +29,7 @@ const Variants = () => {
     dispatch(setBird(bird));
     if (idx === trueIndex) {
       if (marksClone[idx] !== 'check-mark success') {
-        audioSuccess.play();
+        audioCorrect.play();
       }
       marksClone.splice(idx, 1, 'check-mark success');
       setMarkStyles(marksClone);
