@@ -1,4 +1,5 @@
 $background: #2E4053;
+$player: #16A085;
 
 .game-bird-section {
   display: flex;
@@ -29,6 +30,47 @@ $background: #2E4053;
   margin-bottom: 1vw;
   border-bottom: 1px solid darkgrey;
   width: 100%;
+}
+
+.rhap_container {
+  background: none;
+  box-shadow: none;
+}
+
+.rhap_progress-container,
+.rhap_volume-bar-area {
+  outline: none;
+}
+
+.rhap_time.rhap_current-time,
+.rhap_time.rhap_total-time {
+  color: #FFF;
+}
+
+.rhap_additional-controls {
+  display: none;
+}
+
+button[aria-label="Rewind"],
+button[aria-label="Forward"] {
+  display: none;
+}
+
+button[aria-label="Play"],
+button[aria-label="Pause"],
+button[aria-label="Mute"],
+button[aria-label="Unmute"] {
+  color: $player;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.rhap_progress-indicator,
+.rhap_progress-filled,
+.rhap_volume-indicator {
+  background: $player;
 }
 
 @media (max-width: 1024px) {

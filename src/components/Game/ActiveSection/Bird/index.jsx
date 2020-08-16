@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
 import { setData } from 'reducers/GameBird/BirdData/actions';
 import birdsData from '@constants/birds-data';
+import 'react-h5-audio-player/src/styles.scss';
 import './index.scss';
 
 const Bird = () => {
@@ -38,10 +39,10 @@ const Bird = () => {
           <div className="bird-info">
             <span>{species}</span>
           </div>
-          <ReactAudioPlayer
+          <AudioPlayer
+            autoPlayAfterSrcChange={false}
             src={audio}
-            controls
-            style={{ outline: 'none' }}
+            volume={0.1}
           />
         </div>
       </div>

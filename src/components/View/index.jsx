@@ -11,12 +11,13 @@ const View = () => {
   const index = useSelector((state) => state.game.activeIndex);
   const isWin = useSelector((state) => state.victory.isWin);
   const isPlayed = birdsData.length === index;
+
   return (
     <div className="app-wrapper">
       <Header />
       {isPlayed
         ? (isWin ? <Victory /> : <Results />)
-        : (<Game />)}
+        : <Game />}
     </div>
   );
 };

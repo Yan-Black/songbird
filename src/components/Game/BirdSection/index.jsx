@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
-import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
 import birdsData from '@constants/birds-data';
 import placeholder from 'assets/placeholder.jpg';
 import { namePlaceholder } from '@constants';
+import 'react-h5-audio-player/src/styles.scss';
 import './index.scss';
 
 const BirdSection = () => {
@@ -16,7 +17,7 @@ const BirdSection = () => {
   if (isSolved) {
     const {
       current: {
-        audioEl: {
+        audio: {
           current: player,
         },
       },
@@ -35,11 +36,11 @@ const BirdSection = () => {
         <div className="section-bird-info">
           <h1>{isSolved ? name : namePlaceholder}</h1>
         </div>
-        <ReactAudioPlayer
-          src={audio}
+        <AudioPlayer
           ref={ref}
-          controls
-          style={{ outline: 'none' }}
+          src={audio}
+          autoPlayAfterSrcChange={false}
+          volume={0.1}
         />
       </div>
     </div>
