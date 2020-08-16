@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSolved } from 'reducers/GameStatus/actions';
-import { updateScore } from 'reducers/GameResult/actions';
-import { setBird } from 'reducers/GameBird/actions';
+import { setSolved } from 'reducers/game-status/actions';
+import { updateScore } from 'reducers/game-result/actions';
+import { setBird } from 'reducers/game-bird/actions';
 import birdsData from '@constants/birds-data';
 import {
   chekMarks,

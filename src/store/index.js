@@ -1,11 +1,11 @@
 import { createStore, combineReducers } from 'redux';
-import indexReducer from '../reducers/GameIndex';
-import statusReducer from '../reducers/GameStatus';
-import resultReducer from '../reducers/GameResult';
-import birdReducer from '../reducers/GameBird';
-import birdDataReducer from '../reducers/GameBird/BirdData';
-import trueIndexReducer from '../reducers/GameTrueIndex';
-import winReducer from '../reducers/GameWin';
+import indexReducer from 'reducers/game-index';
+import statusReducer from 'reducers/game-status';
+import resultReducer from 'reducers/game-result';
+import birdReducer from 'reducers/game-bird';
+import birdDataReducer from 'reducers/game-bird/bird-data';
+import trueIndexReducer from 'reducers/game-true-index';
+import winReducer from 'reducers/game-win';
 
 const rootReducer = combineReducers({
   game: indexReducer,

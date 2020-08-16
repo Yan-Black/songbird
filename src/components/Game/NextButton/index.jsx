@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setToInitial } from 'reducers/GameStatus/actions';
-import { setTrueIndex } from 'reducers/GameTrueIndex/actions';
-import { updateIndex } from 'reducers/GameIndex/actions';
-import { setBird } from 'reducers/GameBird/actions';
-import { setWin } from 'reducers/GameWin/actions';
+import { setToInitial } from 'reducers/game-status/actions';
+import { setTrueIndex } from 'reducers/game-true-index/actions';
+import { updateIndex } from 'reducers/game-index/actions';
+import { setBird } from 'reducers/game-bird/actions';
+import { setWin } from 'reducers/game-win/actions';
 import { getRandom, maxGameScore } from '@constants';
 import birdsData from '@constants/birds-data';
 import './index.scss';

@@ -17,7 +17,7 @@ export const chekMarks = new Array(length).fill('check-mark');
 export const getRandom = () => Math.floor(Math.random() * length);
 export const maxScore = 5;
 export const maxGameScore = 30;
-export const namePlaceholder = '****';
+export const namePlaceholder = '*****';
 export const audioCorrect = new Audio(correct);
 export const audioErr = new Audio(error);
 export const audioSuccess = new Audio(success);

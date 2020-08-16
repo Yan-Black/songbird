@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { resetIndex } from 'reducers/GameIndex/actions';
-import { resetScore } from 'reducers/GameResult/actions';
-import { setToInitial } from 'reducers/GameStatus/actions';
+import { resetIndex } from 'reducers/game-index/actions';
+import { resetScore } from 'reducers/game-result/actions';
+import { setToInitial } from 'reducers/game-status/actions';
 import './index.scss';
 
 const Results = () => {

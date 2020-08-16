@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import AudioPlayer from 'react-h5-audio-player';
-import { setData } from 'reducers/GameBird/BirdData/actions';
+import { setData } from 'reducers/game-bird/bird-data/actions';
 import birdsData from '@constants/birds-data';
 import 'react-h5-audio-player/src/styles.scss';
 import './index.scss';
