@@ -6,9 +6,9 @@ const initialState = {
 
 const winReducer = (
   state = initialState,
-  action,
+  { type },
 ) => {
-  switch (action.type) {
+  switch (type) {
     case SET_WIN:
       return { ...state, isWin: true };
     case SET_INITIAL:

@@ -11,11 +11,11 @@ const initialState = {
 
 const birdDataReducer = (
   state = initialState,
-  action,
+  { type, payload },
 ) => {
-  switch (action.type) {
+  switch (type) {
     case SET_DATA:
-      return update(state, { $set: action.payload });
+      return update(state, { $set: payload });
     case RESET_DATA:
       return update(state, { $set: initialState });
     default: return state;

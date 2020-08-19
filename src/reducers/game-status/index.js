@@ -6,9 +6,9 @@ const initialState = {
 
 const statusReducer = (
   state = initialState,
-  action,
+  { type },
 ) => {
-  switch (action.type) {
+  switch (type) {
     case SET_SOLVED:
       return { ...state, isSolved: true };
     case SET_TO_INITIAL:

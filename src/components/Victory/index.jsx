@@ -17,13 +17,12 @@ const Victory = () => {
   };
 
   useEffect(() => {
-    const playAudio = () => audioSuccess.play();
-    playAudio();
+    (() => audioSuccess.play())();
   }, []);
 
   return (
     <div className="vitory-wrapper">
-      <img className="victory-image" src={victory} alt="victory" />
+      <img className="victory-image" src={victory} alt="victory-img" />
       <p className="congratulations-score">
         {`Вы набрали ${score} из 30 очков!`}
       </p>

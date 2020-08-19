@@ -6,9 +6,9 @@ const initialState = {
 
 const indexReducer = (
   state = initialState,
-  action,
+  { type },
 ) => {
-  switch (action.type) {
+  switch (type) {
     case UPDATE_INDEX:
       return { ...state, activeIndex: state.activeIndex + 1 };
     case RESET_INDEX:

@@ -24,7 +24,8 @@
         "react/prop-types": "off",
         "no-plusplus": "off",
         "no-nested-ternary": "off",
-        "no-unused-expressions": ["error", { "allowShortCircuit": true }]
+        "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+        "import/no-extraneous-dependencies": "off"
     },
     "settings": {
       "import/resolver": "webpack"

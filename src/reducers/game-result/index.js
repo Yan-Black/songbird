@@ -6,11 +6,11 @@ const initialState = {
 
 const resultReducer = (
   state = initialState,
-  action,
+  { type, payload },
 ) => {
-  switch (action.type) {
+  switch (type) {
     case UPDATE_SCORE:
-      return { ...state, score: state.score + action.payload };
+      return { ...state, score: state.score + payload };
     case RESET_SCORE:
       return { ...state, score: 0 };
     default: return state;

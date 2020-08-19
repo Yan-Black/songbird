@@ -6,11 +6,11 @@ const initialState = {
 
 const birdReducer = (
   state = initialState,
-  action,
+  { type, payload },
 ) => {
-  switch (action.type) {
+  switch (type) {
     case SET_BIRD:
-      return { ...state, bird: action.payload };
+      return { ...state, bird: payload };
     case RESET_BIRD:
       return { ...state, bird: '' };
     default: return state;
