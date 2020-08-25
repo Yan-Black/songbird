@@ -1,3 +1,5 @@
+@import '../../constants/variables.scss';
+
 * {
   padding: 0;
   margin: 0;
@@ -6,11 +8,8 @@
   box-sizing: border-box;
 }
 
-$background: #212F3C;
-$f-size: 1.1em;
-
 body {
-  background-color: $background;
+  background-color: $mainColor;
   font-size: $f-size;
 }
 
@@ -18,7 +17,7 @@ body {
   width: 1200px;
   margin: auto;
   color: #FFF;
-  padding: 1vw;
+  padding: 1%;
 }
 
 @media (max-width: 1200px) {

@@ -1,6 +1,4 @@
-$border: #2E4053;
-$background: #16A085;
-$hover: #48C9B0;
+@import '../../../constants/variables.scss';
 
 .next-btn {
   width: 100%;
@@ -11,7 +9,7 @@ $hover: #48C9B0;
   font-size: 1.1em;
   color: #FFF;
   cursor: pointer;
-  border: 1px solid $border;
+  border: 1px solid $borderColor;
   outline: none;
   &:focus {
     outline: none;
@@ -20,12 +18,12 @@ $hover: #48C9B0;
 
 .solved {
   transition: .2s;
-  background: $background;
+  background: $categoryColor;
   &:hover {
-    background: $hover;
+    background: $activeCategoryColor;
   }
   &:active {
-    background: $background;
+    background: $categoryColor;
   }
 }
 

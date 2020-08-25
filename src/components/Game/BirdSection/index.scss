@@ -1,12 +1,11 @@
-$background: #2E4053;
-$player: #16A085;
+@import '../../../constants/variables.scss';
 
 .game-bird-section {
   display: flex;
   border-radius: 5px;
   padding: 1vw;
   margin-bottom: 2vw;
-  background: $background;
+  background: $blockColor;
 }
 
 .section-image {
@@ -17,24 +16,35 @@ $player: #16A085;
 }
 
 .section-player-container {
-  width: 80%;
-  height: 100%;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .section-bird-info {
   padding-bottom: 1vw;
   margin-bottom: 1vw;
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid $underlineColor;
   width: 100%;
 }
 
 .rhap_container {
   background: none;
   box-shadow: none;
+  padding: 0;
+}
+
+.rhap_main {
+  flex-direction: row-reverse;
+}
+
+.rhap_stacked .rhap_controls-section {
+  margin-top: 0;
+  margin-right: 10px;
+  flex: 0.3 1 auto;
 }
 
 .rhap_progress-container,
@@ -60,7 +70,7 @@ button[aria-label="Play"],
 button[aria-label="Pause"],
 button[aria-label="Mute"],
 button[aria-label="Unmute"] {
-  color: $player;
+  color: $categoryColor;
   outline: none;
   &:focus {
     outline: none;
@@ -70,7 +80,7 @@ button[aria-label="Unmute"] {
 .rhap_progress-indicator,
 .rhap_progress-filled,
 .rhap_volume-indicator {
-  background: $player;
+  background: $categoryColor;
 }
 
 @media (max-width: 1024px) {
@@ -110,6 +120,10 @@ button[aria-label="Unmute"] {
 
   .section-player-container {
     width: 100%;
+  }
+
+  .rhap_stacked .rhap_controls-section {
+    flex: 1 1 auto;
   }
 }
 

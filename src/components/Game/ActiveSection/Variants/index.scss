@@ -1,15 +1,9 @@
-$border: #2E4053;
-$background: #2E4053;
-$variant: #283747;
-$check-def: #85929E;
-$check-success: #48C9B0;
-$check-err: #EC7063;
-$font: #FFF;
+@import '../../../../constants/variables.scss';
 
 .game-variants {
   flex: 1;
   border-radius: 5px;
-  border: 1px solid $border;
+  border: 1px solid $borderColor;
   margin-right: 1vw;
   height: max-content;
 }
@@ -24,16 +18,16 @@ $font: #FFF;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: $check-def;
+  background-color: $emptyMark;
   margin-right: 1vw;
 }
 
 .err {
-  background-color: $check-err;
+  background-color: $failMark;
 }
 
 .success {
-  background-color: $check-success;
+  background-color: $successMark;
 }
 
 .game-variant {
@@ -43,9 +37,9 @@ $font: #FFF;
   justify-content: flex-start;
   padding: 1vw;
   border: none;
-  background: $variant;
+  background: $variantColor;
   color: $font;
-  border-bottom: 1px solid $border;
+  border-bottom: 1px solid $borderColor;
   transition: .2s;
   outline: none;
   cursor: pointer;
@@ -53,7 +47,7 @@ $font: #FFF;
     border: none;
   }
   &:hover {
-    background-color: $background;
+    background-color: $blockColor;
   }
   &:focus {
     outline: none;

@@ -1,9 +1,9 @@
-$background: #2E4053;
+@import '../../../../constants/variables.scss';
 
 .game-bird {
   padding: 1vw;
   flex: 1;
-  background-color: $background;
+  background-color: $blockColor;
   border-radius: 5px;
 }
 
@@ -13,28 +13,27 @@ $background: #2E4053;
   justify-content: space-between;
   margin-bottom: 1vw;
   width: 100%;
-  height: 60%;
 }
 
 .bird-image {
   margin-right: 1vw;
-  width: 35%;
-  height: 180px;
+  width: 180px;
+  height: 150px;
   object-fit: cover;
   border-radius: 5px;
 }
 
 .player-container {
+  width: 100%;
+  height: 150px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  width: 65%;
-  height: 100%;
 }
 
 .bird-info {
-  border-bottom: 1px solid darkgrey;
+  border-bottom: 1px solid $underlineColor;
   width: 100%;
 }
 
@@ -44,6 +43,8 @@ $background: #2E4053;
 
 .bird-description {
   text-align: justify;
+  height: 100px;
+  overflow-y: scroll;
 }
 
 @media (max-width: 1024px) {

@@ -1,5 +1,4 @@
-$category: #16A085;
-$active: #48C9B0;
+@import '../../../constants/variables.scss';
 
 .header-category {
   width: 100%;
@@ -12,7 +11,7 @@ $active: #48C9B0;
   padding: .5vw;
   text-align: center;
   flex-grow: 1;
-  background-color: $category;
+  background-color: $categoryColor;
   &:first-child {
     border-radius: 5px 0 0 5px;
   }
@@ -22,7 +21,7 @@ $active: #48C9B0;
 }
 
 .category-mode.active-mode {
-  background-color: $active;
+  background-color: $activeCategoryColor;
 }
 
 @media (max-width: 767px) {
