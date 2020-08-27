@@ -5,12 +5,14 @@ import './index.scss';
 
 const Header = () => {
   const score = useSelector((state) => state.result.score);
+  const category = useSelector((state) => state.category.category);
+
   return (
     <div className="header">
       <div className="header-logo">
         <h1>
           <i>Song</i>
-          <span className="logo-chunk">
+          <span className={`${category}-color`}>
             <i>bird</i>
           </span>
         </h1>
@@ -22,4 +24,5 @@ const Header = () => {
     </div>
   );
 };
+
 export default Header;

@@ -18,12 +18,11 @@
 
 .solved {
   transition: .2s;
-  background: $categoryColor;
   &:hover {
-    background: $activeCategoryColor;
+    box-shadow: inset 0 0 2px 1px #FFF;
   }
   &:active {
-    background: $categoryColor;
+    opacity: 0.8;
   }
 }
 

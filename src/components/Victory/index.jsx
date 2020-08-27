@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { resetIndex } from 'reducers/game-index/actions';
 import { resetScore } from 'reducers/game-result/actions';
@@ -16,13 +16,18 @@ const Victory = () => {
     dispatch(setToInitial());
   };
 
-  useEffect(() => {
-    (() => audioSuccess.play())();
-  }, []);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => { (() => audioSuccess.play())(); }, []);
 
   return (
     <div className="vitory-wrapper">
-      <img className="victory-image" src={victory} alt="victory-img" />
+      <img
+        className={loaded ? 'victory-image' : 'unload-image'}
+        src={victory}
+        alt="victory-img"
+        onLoad={() => setLoaded(true)}
+      />
       <p className="congratulations-score">
         {`Вы набрали ${score} из 30 очков!`}
       </p>

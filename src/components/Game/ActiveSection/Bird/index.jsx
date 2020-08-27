@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import AudioPlayer from 'react-h5-audio-player';
 import { setData } from 'reducers/game-bird/bird-data/actions';
@@ -18,6 +18,8 @@ const Bird = () => {
     species,
   } = useSelector((state) => state.data);
 
+  const [loaded, setLoaded] = useState(false);
+
   useEffect(() => {
     birdsData[index]
       .forEach((bData) => bData.name === bird
@@ -28,9 +30,10 @@ const Bird = () => {
     <div className="game-bird">
       <div className="player-section">
         <img
-          className="bird-image"
+          className={loaded ? 'bird-image' : 'unloaded-image'}
           src={image}
           alt="bird"
+          onLoad={() => setLoaded(true)}
         />
         <div className="player-container">
           <div className="bird-info">

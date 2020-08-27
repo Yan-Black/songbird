@@ -25,8 +25,8 @@ const Variants = () => {
     const { target: { id } } = e;
     const idx = parseInt(id, 10);
     const marksClone = Array.from(markStyles);
-    const bird = birdsData[index][idx].name;
-    dispatch(setBird(bird));
+    const { name } = birdsData[index][idx];
+    dispatch(setBird(name));
     if (idx === trueIndex) {
       if (marksClone[idx] !== 'check-mark success') {
         audioCorrect.play();
@@ -71,4 +71,5 @@ const Variants = () => {
     </div>
   );
 };
+
 export default Variants;

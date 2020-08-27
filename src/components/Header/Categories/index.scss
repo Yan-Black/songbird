@@ -20,8 +20,28 @@
   }
 }
 
-.category-mode.active-mode {
-  background-color: $activeCategoryColor;
+.exotic {
+  background-color: $categoryColor !important;
+}
+
+.arctic {
+  background-color: $arcticColor !important;
+}
+
+.desert {
+  background-color: $desertColor !important;
+}
+
+.active-mode-exotic {
+  background-color: $activeCategoryColor !important;
+}
+
+.active-mode-arctic {
+  background-color: $activeArcticColor !important;
+}
+
+.active-mode-desert {
+  background-color: $activeDesertColor !important;
 }
 
 @media (max-width: 767px) {

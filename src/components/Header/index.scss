@@ -12,8 +12,16 @@
   margin-bottom: 1vw;
 }
 
-.logo-chunk {
-  color: $activeCategoryColor;
+.exotic-color {
+  color: $categoryColor;
+}
+
+.arctic-color {
+  color: $arcticColor;
+}
+
+.desert-color {
+  color: $desertColor;
 }
 
 @media (max-width: 768px) {

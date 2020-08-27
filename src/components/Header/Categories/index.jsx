@@ -5,6 +5,8 @@ import './index.scss';
 
 const Categories = () => {
   const index = useSelector((state) => state.game.activeIndex);
+  const category = useSelector((state) => state.category.category);
+
   return (
     <div className="header-categories">
       <ul className="header-category">
@@ -12,8 +14,8 @@ const Categories = () => {
           <li
             className={
           i === index
-            ? 'category-mode active-mode'
-            : 'category-mode'
+            ? `category-mode ${category} active-mode-${category}`
+            : `category-mode ${category}`
           }
             key={mode}
           >
@@ -24,4 +26,5 @@ const Categories = () => {
     </div>
   );
 };
+
 export default Categories;

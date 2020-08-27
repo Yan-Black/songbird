@@ -6,6 +6,7 @@ import './index.scss';
 
 const ActiveSection = () => {
   const bird = useSelector((state) => state.bird.bird);
+
   return (
     <div className="game-active-section">
       <Variants />
@@ -20,4 +21,5 @@ const ActiveSection = () => {
     </div>
   );
 };
+
 export default ActiveSection;

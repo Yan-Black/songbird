@@ -6,6 +6,7 @@ import birdReducer from 'reducers/game-bird';
 import birdDataReducer from 'reducers/game-bird/bird-data';
 import trueIndexReducer from 'reducers/game-true-index';
 import winReducer from 'reducers/game-win';
+import categoryReducer from 'reducers/game-category';
 
 const rootReducer = combineReducers({
   game: indexReducer,
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   data: birdDataReducer,
   trueIdx: trueIndexReducer,
   victory: winReducer,
+  category: categoryReducer,
 });
 
 const store = createStore(rootReducer);

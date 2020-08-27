@@ -34,6 +34,7 @@
 .rhap_container {
   background: none;
   box-shadow: none;
+  outline: none;
   padding: 0;
 }
 
@@ -70,7 +71,7 @@ button[aria-label="Play"],
 button[aria-label="Pause"],
 button[aria-label="Mute"],
 button[aria-label="Unmute"] {
-  color: $categoryColor;
+  color: $playerColor;
   outline: none;
   &:focus {
     outline: none;
@@ -80,7 +81,7 @@ button[aria-label="Unmute"] {
 .rhap_progress-indicator,
 .rhap_progress-filled,
 .rhap_volume-indicator {
-  background: $categoryColor;
+  background: $playerColor;
 }
 
 @media (max-width: 1024px) {
