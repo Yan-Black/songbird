@@ -1,0 +1,39 @@
+@import '../../../constants/variables.scss';
+
+.game-active-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.bird-placeholder {
+  flex: 1;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  padding: 1vw;
+  background: $variantColor;
+}
+
+@media (max-width: 768px) {
+  .bird-placeholder {
+    padding: 2vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .game-active-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .bird-placeholder {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .bird-placeholder {
+    padding: 5vw;
+  }
+}

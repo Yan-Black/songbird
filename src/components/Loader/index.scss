@@ -1,0 +1,49 @@
+.loader {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  margin-right: 1vw;
+}
+
+.outer-circle, .inner-circle {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-top: 2px solid #555;
+  border-bottom: 2px solid #555;
+  animation: spin .7s linear infinite;
+}
+
+.inner-circle {
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid #555;
+  border-right: 2px solid #555;
+  animation: spin .7s infinite reverse;
+}
+
+.center {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #555;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  } to {
+    transform: rotate(360deg);
+  }
+}

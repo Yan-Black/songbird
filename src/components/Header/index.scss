@@ -1,0 +1,43 @@
+@import '../../constants/variables.scss';
+
+.header {
+  margin-bottom: 2vw;
+}
+
+.header-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1vw;
+}
+
+.exotic-color {
+  color: $categoryColor;
+}
+
+.arctic-color {
+  color: $arcticColor;
+}
+
+.desert-color {
+  color: $desertColor;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    margin-bottom: 5vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    margin-bottom: 10vw;
+  }
+}

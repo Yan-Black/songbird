@@ -1,0 +1,162 @@
+@import '../../../constants/variables.scss';
+
+.game-bird-section {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 1vw;
+  margin-bottom: 2vw;
+  background: $blockColor;
+}
+
+.section-image-container {
+  height: 155px;
+  width: 18%;
+}
+
+.section-image {
+  height: 100%;
+  width: 100%;
+  margin-right: 2vw;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.section-player-container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.section-bird-info {
+  padding-bottom: 1vw;
+  margin-bottom: 1vw;
+  border-bottom: 1px solid $underlineColor;
+  width: 100%;
+}
+
+.rhap_container {
+  background: none;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+}
+
+.rhap_main {
+  flex-direction: row-reverse;
+}
+
+.rhap_stacked .rhap_controls-section {
+  margin-top: 0;
+  margin-right: 10px;
+  flex: 0.3 1 auto;
+}
+
+.rhap_progress-container,
+.rhap_volume-bar-area {
+  outline: none;
+}
+
+.rhap_time.rhap_current-time,
+.rhap_time.rhap_total-time {
+  color: #FFF;
+}
+
+.rhap_additional-controls {
+  display: none;
+}
+
+button[aria-label="Rewind"],
+button[aria-label="Forward"] {
+  display: none;
+}
+
+button[aria-label="Play"],
+button[aria-label="Pause"],
+button[aria-label="Mute"],
+button[aria-label="Unmute"] {
+  color: $playerColor;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.rhap_progress-indicator,
+.rhap_progress-filled,
+.rhap_volume-indicator {
+  background: $playerColor;
+}
+
+@media (max-width: 1024px) {
+  .section-bird-info {
+    margin-bottom: 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-image-container {
+    width: 30%;
+  }
+
+  .section-player-container {
+    width: 65%;
+  }
+
+  .game-bird-section {
+    padding: 2vw;
+    margin-bottom: 4vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .game-bird-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 4vw;
+    margin-bottom: 5vw;
+  }
+
+  .section-image-container {
+    width: 70%;
+  }
+
+  .section-player-container {
+    width: 100%;
+  }
+
+  .section-bird-info {
+    text-align: center;
+    margin: 5vw 0;
+    padding-bottom: 3vw;
+  }
+
+  .section-player-container {
+    width: 100%;
+  }
+
+  .rhap_stacked .rhap_controls-section {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 375px) {
+  .game-bird-section {
+    padding: 5vw;
+    margin-bottom: 10vw;
+  }
+
+  h1 {
+    font-size: $mobileH1;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-image-container {
+    width: 100%;
+    height: 180px;
+  }
+}

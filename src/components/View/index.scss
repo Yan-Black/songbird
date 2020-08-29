@@ -1,0 +1,57 @@
+@import '../../constants/variables.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background-color: $mainColor;
+  font-size: $f-size;
+}
+
+.app-wrapper {
+  width: 1200px;
+  margin: auto;
+  color: #FFF;
+  padding: 1%;
+}
+
+@media (max-width: 1200px) {
+  .app-wrapper {
+    width: 100%;
+    padding: 5%;
+  }
+}
+
+@media (max-width: 767px) {
+  .app-wrapper {
+    padding: 5% 15%;
+  }
+}
+
+@media (max-width: 500px) {
+  .app-wrapper {
+    padding: 5% 5%;
+  }
+}

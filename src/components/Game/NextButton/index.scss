@@ -1,0 +1,48 @@
+@import '../../../constants/variables.scss';
+
+.next-btn {
+  width: 100%;
+  padding: .5vw;
+  margin: 2vw 0;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.1em;
+  color: #FFF;
+  cursor: pointer;
+  border: 1px solid $borderColor;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.solved {
+  transition: .2s;
+  &:hover {
+    box-shadow: inset 0 0 2px 1px #FFF;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .next-btn {
+    padding: 1vw;
+    margin: 4vw 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .next-btn {
+    padding: 2.5vw;
+    margin: 5vw 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .next-btn {
+    padding: 3vw;
+    margin: 10vw 0;
+  }
+}

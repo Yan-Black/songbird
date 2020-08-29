@@ -1,0 +1,107 @@
+@import '../../../../constants/variables.scss';
+
+.game-variants {
+  flex: 1;
+  border-radius: 5px;
+  border: 1px solid $borderColor;
+  margin-right: 1vw;
+  height: max-content;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-mark {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $emptyMark;
+  margin-right: 1vw;
+}
+
+.err {
+  background-color: $failMark;
+}
+
+.success {
+  background-color: $successMark;
+}
+
+.game-variant {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1vw;
+  border: none;
+  background: $variantColor;
+  color: $font;
+  border-bottom: 1px solid $borderColor;
+  transition: .2s;
+  outline: none;
+  cursor: pointer;
+  &:last-child {
+    border: none;
+  }
+  &:hover {
+    background-color: $blockColor;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .game-variants {
+    margin-right: 2vw;
+  }
+  .game-variant {
+    padding: 1.7vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-variants {
+    margin-right: 4vw;
+  }
+
+  .check-mark {
+    margin-right: 1.5vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .game-variants {
+    margin-right: 0;
+    margin-bottom: 2vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .game-variant {
+    padding: 4vw;
+  }
+
+  .game-variants {
+    margin-bottom: 5vw;
+  }
+
+  .check-mark {
+    margin-right: 4vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .game-variant {
+    padding: 5vw;
+  }
+
+  .game-variants {
+    margin-bottom: 10vw;
+  }
+}
+
+
