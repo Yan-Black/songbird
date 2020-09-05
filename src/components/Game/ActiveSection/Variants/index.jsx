@@ -30,20 +30,18 @@ const Variants = () => {
     if (idx === trueIndex) {
       if (marksClone[idx] !== 'check-mark success') {
         audioCorrect.play();
+        dispatch(updateScore(score));
       }
       marksClone.splice(idx, 1, 'check-mark success');
       setMarkStyles(marksClone);
       dispatch(setSolved());
-      dispatch(updateScore(score));
-    } else {
-      score > 0 && setScore(score - 1);
-      if (!isSolved) {
-        if (marksClone[idx] !== 'check-mark err') {
-          audioErr.play();
-        }
-        marksClone.splice(idx, 1, 'check-mark err');
-        setMarkStyles(marksClone);
+    } else if (!isSolved) {
+      if (marksClone[idx] !== 'check-mark err') {
+        setScore(score - 1);
+        audioErr.play();
       }
+      marksClone.splice(idx, 1, 'check-mark err');
+      setMarkStyles(marksClone);
     }
   };
 
