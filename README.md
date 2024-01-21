@@ -1,7 +1,7 @@
 This is React/Redux project created with custom  setup.
 Functional components and hooks approach was used.
 
-#### Project deploy link [songbird](https://yan-black-songbird.netlify.app/).
+#### Project link [songbird](https://yan-black-songbird.netlify.app/).
 
 ### Used Libraries
 * Redux
